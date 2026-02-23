@@ -35,3 +35,36 @@ body {
 .userFlash {
     background-color: rgb(109, 59, 203);
 }
+
+#startBtn {
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5); 
+    color: white;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect (Laptop) */
+#startBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Click Effect */
+#startBtn:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    #startBtn {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
+}

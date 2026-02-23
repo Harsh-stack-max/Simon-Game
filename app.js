@@ -11,17 +11,18 @@ let btns = ["yellow","red","purple","green"];
 
 let h2 = document.querySelector('h2');
 let allBtns = document.querySelectorAll(".btn");
+let startBtn = document.querySelector("#startBtn");
 
 //game start karne ke liye simple logic
 
-document.addEventListener("keypress",function(){
-    if(started==false){
-        // console.log("game is started");
+startBtn.addEventListener("click", function(){
+    if(!started){
         started = true;
         levelUp();
+        startBtn.innerText = "Game Running...";
+        startBtn.disabled = true;
     }
-})
-
+});
 
 //button ko flash karane ke liye function
 
@@ -67,7 +68,7 @@ function checkAns(idx) {
         }
         // console.log("same value");
     }else{
-        h2.innerHTML = `Game Over! <br> Your score was <b>${level-1}</b> <br> Press any key to Restart`;
+        h2.innerHTML = `Game Over! Your score was <b>${level-1}</b>`;
         if(level == 0){
           document.querySelector("h3").innerText = `High Score : ${level}`;  
         }
@@ -107,4 +108,6 @@ function reset(){
     gameSeq = [];
     userSeq = [];
     level = 0;
+    startBtn.disabled = false;
+    startBtn.innerText = "Reset Game";
 }

@@ -53,7 +53,7 @@ function levelUp(){
     // console.log(randIdx);
     // console.log(randColor);
     // console.log(randBtn);
-    console.log(gameSeq);
+    // console.log(gameSeq);
 }
 
 // ab ye main logic hai jisme sequence match karna hai !!!

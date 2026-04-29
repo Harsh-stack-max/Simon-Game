@@ -68,3 +68,99 @@ body {
         padding: 10px 22px;
     }
 }
+
+/* footer ki styling idhar hogi */
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #36d1dc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* yaha maine instructions ke liye css likhi hai */
+
+#instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Box Styling */
+.instructions-box {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 20px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading */
+.instructions-box h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* List Styling */
+.instructions-box ul {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* List spacing */
+.instructions-box ul li {
+    margin-bottom: 10px;
+}
+
+/* Button */
+#startGameBtn {
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+#startGameBtn:hover {
+    transform: scale(1.08);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

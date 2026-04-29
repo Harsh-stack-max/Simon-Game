@@ -13,6 +13,13 @@ let h2 = document.querySelector("h2");
 let allBtns = document.querySelectorAll(".btn");
 let startBtn = document.querySelector("#startBtn");
 
+let instructions = document.querySelector("#instructions");
+let startGameBtn = document.querySelector("#startGameBtn");
+
+startGameBtn.addEventListener("click", function () {
+  instructions.style.display = "none";
+});
+
 //game start karne ke liye simple logic
 
 startBtn.addEventListener("click", function () {

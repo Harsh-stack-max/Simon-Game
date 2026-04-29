@@ -1,41 +1,80 @@
+/* Global */
 body {
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
 }
 
-.btn {
-    height: 200px;
-    width: 200px;
-    border: 8px solid black;
-    border-radius:20%;
-    margin: 2rem;
+/* Heading */
+h1 {
+    font-size: 32px;
+    margin-top: 10px;
 }
 
+h2 {
+    margin: 10px 0;
+}
+
+h3 {
+    margin: 5px 0 15px;
+    color: #444;
+}
+
+/* Button Container */
 .btn-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Rows */
+.line-one, .line-two {
+    display: flex;
+}
+
+/* Game Buttons */
+.btn {
+    height: 22vw;
+    width: 22vw;
+    max-height: 200px;
+    max-width: 200px;
+    border: 6px solid black;
+    border-radius: 20%;
+    margin: 10px;
+    transition: transform 0.1s ease;
+}
+
+/* Colors */
 .yellow {
-    background-color: yellow;
+    background-color: #f7d94c;
 }
 .purple {
-    background-color: rgb(227, 63, 227);
+    background-color: #d96df0;
 }
-.green{
-    background-color: rgb(83, 214, 83);
+.green {
+    background-color: #5cd65c;
 }
 .red {
-    background-color: rgb(224, 68, 68);
+    background-color: #ff6b6b;
 }
 
+/* Flash Effects */
 .flash {
-    background-color: white;
+    background-color: white !important;
 }
 
 .userFlash {
-    background-color: rgb(109, 59, 203);
+    background-color: #6d3bcb !important;
 }
 
+/* Click feel */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Start Button */
 #startBtn {
     padding: 12px 28px;
     font-size: 18px;
@@ -50,27 +89,15 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover Effect (Laptop) */
 #startBtn:hover {
     transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Click Effect */
 #startBtn:active {
     transform: scale(0.95);
 }
 
-/* Mobile Friendly */
-@media (max-width: 600px) {
-    #startBtn {
-        font-size: 16px;
-        padding: 10px 22px;
-    }
-}
-
-/* footer ki styling idhar hogi */
-
+/* Footer */
 footer {
     margin-top: 40px;
     padding: 15px;
@@ -88,8 +115,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-/* yaha maine instructions ke liye css likhi hai */
+/* ========================= */
+/* 🎮 Instructions Popup */
+/* ========================= */
 
 #instructions {
     position: fixed;
@@ -104,25 +132,23 @@ footer a:hover {
     z-index: 1000;
 }
 
-/* Box Styling */
 .instructions-box {
     background: white;
     padding: 35px 30px;
     border-radius: 20px;
-    width: 340px;
+    width: 85%;
+    max-width: 360px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Heading */
 .instructions-box h2 {
     margin-bottom: 15px;
     font-size: 22px;
     color: #333;
 }
 
-/* List Styling */
 .instructions-box ul {
     text-align: left;
     margin: 20px 0;
@@ -131,12 +157,11 @@ footer a:hover {
     color: #555;
 }
 
-/* List spacing */
 .instructions-box ul li {
     margin-bottom: 10px;
 }
 
-/* Button */
+/* Start Game Button inside popup */
 #startGameBtn {
     padding: 12px 25px;
     border: none;
@@ -148,7 +173,6 @@ footer a:hover {
     transition: 0.3s;
 }
 
-/* Hover */
 #startGameBtn:hover {
     transform: scale(1.08);
 }
@@ -162,5 +186,30 @@ footer a:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* 📱 Mobile Optimization */
+/* ========================= */
+
+@media (max-width: 600px) {
+    .btn {
+        height: 30vw;
+        width: 30vw;
+        margin: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #startBtn {
+        font-size: 16px;
+        padding: 10px 22px;
     }
 }
